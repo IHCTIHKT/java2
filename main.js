@@ -1,3 +1,1 @@
-let a = 20;
-
-console.log('Hello World!');
+console.log('hello world')
