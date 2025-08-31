@@ -1,3 +1,2 @@
-import { text } from './tools.js';
-
-console.log(text);
+import { sayHi } from './funactions.js';
+console.log(sayHi);
