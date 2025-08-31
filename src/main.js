@@ -1,2 +1,2 @@
-import { sayHi } from './funactions.js';
-console.log(sayHi);
+import { sum } from './funactions.js';
+console.log(sum);
