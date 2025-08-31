@@ -1,6 +1,2 @@
-export const sayHi = (name = 'Аноним') => {};
-const greenColor = '\x1b[32m';
-const blueColor = '\x1b[34m';
-const resetColor = '\x1b[0m';
-
-console.log(`${greenColor}Привет${resetColor} ${blueColor}${'Аноним'}${resetColor}`);
+export const sum = (a, b, c, d, e) => a + b + c + d + e;
+console.log(sum(10, 20, 30, 40, 50));
