@@ -1,1 +1,1 @@
-import { startsWithIgnoreCase } from './strings.js';
+import { welcomeMessage } from './strings.js';
