@@ -1,1 +1,1 @@
-import { randomString } from './strings.js';
+import { startsWithIgnoreCase } from './strings.js';
