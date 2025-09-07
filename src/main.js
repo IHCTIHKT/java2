@@ -1,2 +1,1 @@
-import { sum } from './funactions.js';
-console.log(sum);
+import { tomatoPrice } from './funactions.js';
