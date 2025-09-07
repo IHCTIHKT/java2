@@ -1,1 +1,1 @@
-import { getStringLength } from './strings.js';
+import { randomString } from './strings.js';
