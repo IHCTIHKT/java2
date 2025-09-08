@@ -1,6 +1,7 @@
 export function generateInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
-let a = generateInteger(1, 10);
-let площадь = a * a;
-console.log('Площадь квадрата со стороной a=' + a + 'равна' + площадь);
+let radius = generateInteger(3, 13);
+let square = (Math.PI * radius * radius).toFixed(2);
+console.log('radius' + radius);
+console.log('square' + square);
