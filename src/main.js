@@ -1,1 +1,1 @@
-import { welcomeMessage } from './strings.js';
+import { generateInteger } from './numbers.js';
