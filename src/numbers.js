@@ -1,7 +1,5 @@
-export function generateInteger(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
+export function isEven(number) {
+  return number % 2 === 0;
 }
-let radius = generateInteger(3, 13);
-let square = (Math.PI * radius * radius).toFixed(2);
-console.log('radius' + radius);
-console.log('square' + square);
+console.log(isEven(4));
+console.log(isEven(3));

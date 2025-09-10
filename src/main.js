@@ -1,1 +1,1 @@
-import { generateInteger } from './numbers.js';
+import { isEven } from './numbers.js';
