@@ -1,1 +1,1 @@
-import { isEven } from './numbers.js';
+import { calculate } from './numbers.js';
