@@ -1,8 +1,9 @@
-export function calculate(classes, studentsClass) {
-  return Math.ceil(studentsClass / 2) * classes;
+export function weather() {
+  const planet = Math.floor(Math.random() * 61 + 20) * 10;
+  const temperature = Math.floor(Math.random() * 1000000)
+    .toString()
+    .padStart(6, '0');
+  return `${planet}, ${temperature}`;
 }
-const classes = 10;
-const students = 7;
-const desks = calculate(classes, students);
-
-console.log(`для ${classes} классов по ${students} учеников, нужно ${desks} парт`);
+const temperature = weather();
+console.log(`Прогноз погоды на TerraRandomis: Температура завтра ${temperature} `);
