@@ -1,1 +1,1 @@
-import {} from './numbers.js';
+import { compare } from './compares.js';
