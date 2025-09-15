@@ -1,1 +1,1 @@
-import { compare } from './compares.js';
+import { fizzBuzz } from './if.js';
