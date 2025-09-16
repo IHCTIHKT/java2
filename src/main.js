@@ -1,1 +1,1 @@
-import { fizzBuzz } from './if.js';
+import { adult } from './if.js';

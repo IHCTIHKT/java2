@@ -1,11 +1,9 @@
-export function fizzBuzz(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
-    return 'FizzBuzz';
-  } else if (number % 3 === 0) {
-    return 'Fizz';
-  } else if (number % 5 === 0) {
-    return 'Buzz';
-  }
-}
-const numbers = Math.floor(Math.random() * 12) + 9;
-console.log(`${numbers}: ${fizzBuzz(numbers)}`);
+export const adult = (age) => {
+  const message = age >= 18 ? 'true' : 'false';
+  const color = age >= 18 ? '\x1b[32m' : '\x1b[31m';
+  console.log(color + message + '\x1b[0m');
+  return message;
+};
+const randomAge = Math.floor(Math.random() * 8) + 15;
+console.log(randomAge);
+adult(randomAge);
