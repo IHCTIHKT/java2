@@ -1,1 +1,1 @@
-import { adult } from './if.js';
+import { bikiniBottom } from './switches.js';
