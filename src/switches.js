@@ -1,36 +1,37 @@
-export function bikiniBottom(character) {
-  let face = '';
+export function restaurantSuper(restaurant) {
+  let status = '';
   let color = '';
-  switch (character.toLowerCase()) {
-    case 'spongebob':
-      face = '| ( · )( · ) |';
+  switch (restaurant) {
+    case 'Формируются чеки':
+    case 'Назначаются повара':
+      status = 'Обрабатывается';
+      color = '\x1b[34m';
+      break;
+    case 'Запекается':
+    case 'Варится':
+    case 'Жарится':
+    case 'Поиск курьера':
+      status = 'Готовится';
       color = '\x1b[33m';
       break;
-    case 'patrick':
-      face = '/ ( · )( · ) \\';
-      color = '\x1b[35m';
+    case 'Курьер берет заказ':
+    case 'Курьер в пути':
+    case 'Курьер подъезжает':
+      status = 'У курьера';
+      color = '\x1b[34m';
       break;
-    case 'squidward':
-      face = '( ( · )( · ) )';
-      color = '\x1b[36m';
-      break;
-    case 'plankton':
-      face = '| ( · ) |';
+    case 'Клиент отказался от заказа':
+    case 'Заказ доставлен':
+      status = 'Готов';
       color = '\x1b[32m';
       break;
-    case 'crabs':
-      face = '|·||·|';
-      color = '\x1b[31m';
-      break;
+
     default:
-      console.log('НЕ ВЫДУМЫВАЙ');
-      return;
+      status = 'Неизвестный статус';
+      color = '\x1b[31m';
   }
-  console.log(color + face + '\x1b[0m');
+  console.log(color + status + '\x1b[0m');
 }
-bikiniBottom('spongebob');
-bikiniBottom('patrick');
-bikiniBottom('squidward');
-bikiniBottom('plankton');
-bikiniBottom('crabs');
-bikiniBottom('spiderman');
+restaurantSuper('Запекается');
+restaurantSuper('БАРБОСКИН');
+restaurantSuper('Формируются чеки');

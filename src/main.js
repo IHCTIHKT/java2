@@ -1,1 +1,1 @@
-import { bikiniBottom } from './switches.js';
+import { restaurantSuper } from './switches.js';
