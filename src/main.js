@@ -1,1 +1,1 @@
-import { restaurantSuper } from './switches.js';
+import { removeName } from './objects.js';
