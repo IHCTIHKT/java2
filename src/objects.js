@@ -1,11 +1,8 @@
-export function removeName(obj, name) {
-  delete obj[name];
+export function addFields(obj, fieldName, value) {
+  obj[fieldName] = value;
   return obj;
 }
-const person = {
-  name: 'Tramp',
-  age: 72,
-  country: 'USA',
-};
 
-console.log(removeName(person, 'name'));
+const person = { name: 'Said', age: 32 };
+
+console.log(addFields(person, 'wife', 'Maria'));

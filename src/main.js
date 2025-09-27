@@ -1,1 +1,1 @@
-import { removeName } from './objects.js';
+import { addFields } from './objects.js';
