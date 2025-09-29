@@ -1,17 +1,31 @@
-function compareFieldValues(obj1, obj2, fieldName) {
-  const value1 = obj1[fieldName];
-  const value2 = obj2[fieldName];
+function relocationHuman(user) {
+  const isAdult = user.age >= 18;
 
-  if (value1 === value2) {
-    console.log('\x1b[32m[СОВПАДАЕТ]\x1b[0m', `Поле "${fieldName}": ${value1}`);
+  if (isAdult) {
+    if (user.city === 'Москва') {
+      if (user.address.includes('Ленина')) {
+        console.log('\x1b[32mМосква\x1b[0m \x1b[34mулица Кривая 109\x1b[0m');
+      } else {
+        console.log('\x1b[32mИваново\x1b[0m \x1b[34mулица Важная 5\x1b[0m');
+      }
+    } else {
+      if (user.address.includes('Капиталистов')) {
+        console.log('\x1b[32mМосква\x1b[0m \x1b[34mулица Материалистов 3\x1b[0m');
+      } else {
+        console.log(`x1b[32m${user.city}\x1b[0m \x1b[34mулица Центральная 2\x1b[0m`);
+      }
+    }
   } else {
-    console.log('\x1b[31m[РАЗЛИЧАЕТСЯ]\x1b[0m', `Поле "${fieldName}":`);
+    if (user.age < 16) {
+      console.log('${user.city} ${user.address} - переселение не требуется');
+    } else if (user.age >= 16 && user.age <= 17) {
+      if (user.city === 'Москва') {
+        console.log('\x1b[32mКострома\x1b[0m \x1b[34m${user.address}\x1b[0m');
+      } else {
+        console.log('${user.city} ${user.address} - переселение не требуется');
+      }
+    }
   }
 }
 
-const obj1 = { name: 'Alice', age: 25, city: 'Moscow' };
-const obj2 = { name: 'Bob', age: 25, city: 'SPb' };
-
-compareFieldValues(obj1, obj2, 'age');
-compareFieldValues(obj1, obj2, 'name');
-compareFieldValues(obj1, obj2, 'city');
+relocationHuman({ age: 16, city: 'Москва', address: 'Ленина' });
