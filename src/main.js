@@ -1,1 +1,1 @@
-import { logJoin } from './arrays.js';
+import { setNickname } from './arrays.js';
