@@ -1,22 +1,10 @@
-export function setNickname(user, newNickname) {
-  if (!Array.isArray(user.nicknameHistory)) {
-    user.nicknameHistory = [];
+export function getRandomItem(arr) {
+  if (arr.length === 0) {
+    return undefined;
   }
 
-  if (user.nickname) {
-    user.nicknameHistory.push(user.nickname);
-  }
-
-  user.nickname = newNickname;
+  const random = Math.floor(Math.random() * arr.length);
+  return arr[random];
 }
 
-const user = { id: 8, nickname: 'Stepan Stepanov', nicknameHistory: [] };
-
-setNickname(user, 'Александр Сильвестрович');
-console.log(user);
-
-setNickname(user, 'Саша');
-console.log(user);
-
-const max = { id: 3, nickname: 'Franz Hermann', nicknameHistory: ['max', 'maxxx'] };
-console.log(max);
+console.log(getRandomItem([1, 2, 3, 4, 5, 6, 7]));

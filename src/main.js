@@ -1,1 +1,1 @@
-import { setNickname } from './arrays.js';
+import { getRandomItem } from './arrays.js';
