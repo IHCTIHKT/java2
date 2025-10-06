@@ -1,10 +1,15 @@
-export function getRandomItem(arr) {
-  if (arr.length === 0) {
-    return undefined;
+export function unique(arr, element) {
+  if (!arr.includes(element)) {
+    arr.push(element);
   }
-
-  const random = Math.floor(Math.random() * arr.length);
-  return arr[random];
 }
 
-console.log(getRandomItem([1, 2, 3, 4, 5, 6, 7]));
+const list = [];
+unique(list, 'Картошка');
+unique(list, 'Капуста');
+unique(list, 'Морковь');
+unique(list, 'Картошка');
+unique(list, 'Лук');
+unique(list, 'Морковь');
+
+console.log(list);
