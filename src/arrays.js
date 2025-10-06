@@ -1,15 +1,3 @@
-export function unique(arr, element) {
-  if (!arr.includes(element)) {
-    arr.push(element);
-  }
-}
-
-const list = [];
-unique(list, 'Картошка');
-unique(list, 'Капуста');
-unique(list, 'Морковь');
-unique(list, 'Картошка');
-unique(list, 'Лук');
-unique(list, 'Морковь');
-
-console.log(list);
+false; // так как регистрозависимое
+4; // сок на 4 позиции.
+24; // помидоры 8 букв P.S поп удалил огурцы поэтому помидоры последний элемент.
