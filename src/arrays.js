@@ -1,16 +1,11 @@
-export function merge(obj1, obj2, priority) {
-  if (priority === 1) {
-    return { ...obj2, ...obj1, noise: obj2.notes };
-  } else {
-    return { ...obj1, ...obj2, noise: obj1.notes };
-  }
+function championShip(athletes) {
+  const [first, second, third, ...others] = athletes;
+
+  console.log(`1. Первое место: ${first}`);
+  console.log(`2. Второе место: ${second}`);
+  console.log(`3. Третье место: ${third}`);
+  console.log(`4. Остальные спортсмены: ${others}`);
 }
 
-const user = { name: 'Коля', age: 9, notes: 'Заметка от Коли!' };
-const work = { address: 'Строительная 4', department: 'Шпаклёвщик', notes: 'Рабочая заметка' };
-
-console.log(merge(user, work));
-
-console.log(merge(user, work, 0));
-
-console.log(merge(user, work, 1));
+const athletes = ['Александр', 'Михаил', 'Валентин', 'Сергей', 'Артур'];
+championShip(athletes);
