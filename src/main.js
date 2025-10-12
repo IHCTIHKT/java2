@@ -1,1 +1,1 @@
-import { unique } from './arrays.js';
+import { merge } from './arrays.js';
