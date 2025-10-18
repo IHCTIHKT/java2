@@ -1,38 +1,19 @@
-function showInfo(user) {
-  const {
-    name,
-    surname,
-    patronymic = 'Не указано',
-    age,
-    gender = 'Не указано',
-    photo = 'https://photos.com/default.jpg',
-  } = user;
+const alex = { name: 'Alex', dateOfBirth: new Date('2024-05-15') };
+const jake = { name: 'Jake', dateOfBirth: new Date('1970-01-01') };
+const join = { name: 'Join', dateOfBirth: new Date('2007-12-30') };
+const bob = { name: 'Bob', dateOfBirth: new Date() };
 
-  const adult = age >= 18 ? 'Да' : 'Нет';
+function getAge(person) {
+  const today = new Date();
+  let age = today.getFullYear() - person.dateOfBirth.getFullYear();
+  if (today < new Date(today.getFullYear(), person.dateOfBirth.getMonth(), person.dateOfBirth.getDate())) {
+    age--;
+  }
 
-  console.log('Карточка пользователя');
-  console.log(`Имя: ${name}`);
-  console.log(`Фамилия: ${surname}`);
-  console.log(`Отчество: ${patronymic}`);
-  console.log(`Возраст: ${age}`);
-  console.log(`Совершеннолетний: ${adult}`);
-  console.log(`Пол: ${gender}`);
-  console.log(`Фото: ${photo}`);
+  return age;
 }
-const ryan = {
-  name: 'Райан',
-  age: 28,
-  surname: 'Гослинг',
-  gender: 'Мужчина',
-  photo: 'https://photos.com/photo.jpg',
-};
 
-const jason = {
-  name: 'Джейсон',
-  age: 5,
-  surname: 'Стетхем',
-  patronymic: 'Александрович',
-};
-
-showInfo(ryan);
-showInfo(jason);
+[alex, jake, join, bob].forEach((person, i) => {
+  const colors = ['\x1b[34m', '\x1b[32m', '\x1b[33m', '\x1b[35m'];
+  console.log(colors[i] + `${person.name}: ${getAge(person)} лет` + '\x1b[0m');
+});
