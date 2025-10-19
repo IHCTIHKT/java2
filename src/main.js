@@ -1,1 +1,1 @@
-import { merge } from './arrays.js';
+import { Array } from './loops.js';

@@ -1,17 +1,20 @@
-function Numbers() {
-  let positive = 0,
-    negative = 0;
-  const arr = [];
-  for (let i = 0; i < 10; i++) {
-    arr.push(Math.floor(Math.random() * 7) - 3);
-  }
+export function Array(arr) {
+  let min = arr[0];
+  let max = arr[0];
+  let sum = 0;
 
-  for (let number of arr) {
-    number >= 0 ? positive++ : negative++;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min) min = arr[i];
+    if (arr[i] > max) max = arr[i];
+    sum += arr[i];
   }
-
-  console.log('Массив', arr);
-  console.log('Положительных:', positive);
-  console.log('Отрицательных:', negative);
+  return { min, max, avg: sum / arr.length };
 }
-Numbers();
+
+const numbers = [];
+for (let i = 0; i < 8; i++) {
+  numbers.push(Math.floor(Math.random() * 14) + 2);
+}
+
+console.log(numbers);
+console.log(Array(numbers));
