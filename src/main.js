@@ -1,1 +1,1 @@
-import { Array } from './loops.js';
+import { cubeGame } from './loops.js';

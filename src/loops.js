@@ -1,20 +1,17 @@
-export function Array(arr) {
-  let min = arr[0];
-  let max = arr[0];
-  let sum = 0;
+export function cubeGame() {
+  let attempts = 1;
+  let cube1, cube2;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < min) min = arr[i];
-    if (arr[i] > max) max = arr[i];
-    sum += arr[i];
+  cube1 = Math.floor(Math.random() * 6) + 1;
+  cube2 = Math.floor(Math.random() * 6) + 1;
+
+  while (cube1 !== cube2) {
+    cube1 = Math.floor(Math.random() * 6) + 1;
+    cube2 = Math.floor(Math.random() * 6) + 1;
+    attempts++;
   }
-  return { min, max, avg: sum / arr.length };
+
+  return { double: cube1, attempts };
 }
 
-const numbers = [];
-for (let i = 0; i < 8; i++) {
-  numbers.push(Math.floor(Math.random() * 14) + 2);
-}
-
-console.log(numbers);
-console.log(Array(numbers));
+console.log(cubeGame());
