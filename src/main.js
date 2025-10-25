@@ -1,1 +1,1 @@
-import { restorant } from './loops.js';
+import { revertText } from './loops.js';
