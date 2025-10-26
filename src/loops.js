@@ -1,15 +1,12 @@
-export function christmasTree(height) {
-  for (let row = 1; row <= height; row++) {
-    let empty = '';
-    for (let spaces = 0; spaces < height - row; spaces++) {
-      empty += ' ';
-    }
-    for (let stars = 0; stars < row * 2 - 1; stars++) {
-      empty += '*';
-    }
+import chalk from 'chalk';
 
-    console.log(empty);
+function randomRainbowNumber(numbers) {
+  const colors = [chalk.red, chalk.green, chalk.blue];
+  for (let i = 0; i <= numbers; i++) {
+    const color = colors[i % 3];
+    console.log(color(i));
   }
 }
 
-christmasTree(5);
+const randomNumber = Math.floor(Math.random() * 21) + 5;
+randomRainbowNumber(randomNumber);
