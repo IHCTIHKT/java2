@@ -1,12 +1,15 @@
-export function revertText(str) {
-  let reversed = '';
+export function christmasTree(height) {
+  for (let row = 1; row <= height; row++) {
+    let empty = '';
+    for (let spaces = 0; spaces < height - row; spaces++) {
+      empty += ' ';
+    }
+    for (let stars = 0; stars < row * 2 - 1; stars++) {
+      empty += '*';
+    }
 
-  for (let i = str.length - 1; i > 0; i--) {
-    reversed += str[i];
+    console.log(empty);
   }
-
-  return reversed;
 }
 
-const text = 'УлицаЛенинаСамаяКрасиваяУлицаВгородеМахачкала';
-console.log(revertText(text));
+christmasTree(5);
