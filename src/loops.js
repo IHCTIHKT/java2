@@ -1,12 +1,16 @@
 import chalk from 'chalk';
 
-function randomRainbowNumber(numbers) {
-  const colors = [chalk.red, chalk.green, chalk.blue];
-  for (let i = 0; i <= numbers; i++) {
-    const color = colors[i % 3];
-    console.log(color(i));
+export function printColoredObject(obj) {
+  for (const key in obj) {
+    console.log(chalk.red(key) + ' ' + chalk.yellow(obj[key]));
   }
 }
 
-const randomNumber = Math.floor(Math.random() * 21) + 5;
-randomRainbowNumber(randomNumber);
+const testObj = {
+  id: 1,
+  name: 'Max',
+  ip: '127.0.0.1',
+  age: 25,
+};
+
+printColoredObject(testObj);
