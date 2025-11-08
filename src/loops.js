@@ -1,16 +1,14 @@
-import chalk from 'chalk';
-
-export function printColoredObject(obj) {
-  for (const key in obj) {
-    console.log(chalk.red(key) + ' ' + chalk.yellow(obj[key]));
+function findMultiply(number, search) {
+  const numbers = number.toString();
+  for (let i = 0; i < numbers.length; i++) {
+    for (let l = i + 1; l < numbers.length; l++) {
+      let first = Number(numbers[i]);
+      let last = Number(numbers[l]);
+      if (first * last === search) {
+        return i + '' + l;
+      }
+    }
   }
+  return '-1-1';
 }
-
-const testObj = {
-  id: 1,
-  name: 'Max',
-  ip: '127.0.0.1',
-  age: 25,
-};
-
-printColoredObject(testObj);
+console.log(findMultiply(1234567890, 18));
