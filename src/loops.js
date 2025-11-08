@@ -1,14 +1,26 @@
-function findMultiply(number, search) {
-  const numbers = number.toString();
-  for (let i = 0; i < numbers.length; i++) {
-    for (let l = i + 1; l < numbers.length; l++) {
-      let first = Number(numbers[i]);
-      let last = Number(numbers[l]);
-      if (first * last === search) {
-        return i + '' + l;
-      }
+export function listUsers(users) {
+  const ageNumber = {};
+  for (let i = 0; i < users.length; i++) {
+    const age = users[i].age;
+    if (ageNumber[age]) {
+      ageNumber[age] += 1;
+    } else {
+      ageNumber[age] = 1;
     }
   }
-  return '-1-1';
+  return ageNumber;
 }
-console.log(findMultiply(1234567890, 18));
+
+const users = [
+  { name: 'Alice', age: 25 },
+  { name: 'Bob', age: 30 },
+  { name: 'Charlie', age: 25 },
+  { name: 'Diana', age: 35 },
+  { name: 'Eve', age: 30 },
+  { name: 'Frank', age: 28 },
+  { name: 'Grace', age: 25 },
+  { name: 'Hannah', age: 41 },
+  { name: 'Ivy', age: 30 },
+  { name: 'Jack', age: 28 },
+];
+console.log(listUsers(users));

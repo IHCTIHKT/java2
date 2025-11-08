@@ -1,1 +1,1 @@
-import { printColoredObject } from './loops.js';
+import { listUsers } from './loops.js';
