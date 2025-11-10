@@ -1,1 +1,1 @@
-import { theLongestArray } from './loops.js';
+import { compareArrays } from './loops.js';
